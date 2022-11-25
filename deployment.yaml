@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ankit-app-ui
+  name: ankit-app-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ankit-app-ui
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ankit-app-ui
+    spec:
+      containers:
+      - image: ankijosh/ankijosh1:appv1
+        name: ankijosh1
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
